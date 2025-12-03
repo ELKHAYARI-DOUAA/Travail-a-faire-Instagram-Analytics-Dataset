@@ -14,12 +14,19 @@ DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
 4.Analyse et interprétation des résultats
 
    4.1 Chargement de la base de données
+   
    4.2 Vérification des valeurs manquantes
+   
    4.3 Statistiques descriptives
+   
    4.4 Distribution des likes
+   
    4.5 Évolution des likes dans le temps
+   
    4.6 Relation entre Reach et Likes
+   
    4.7 Calcul du taux d’engagement
+   
    4.8 Évolution du taux d’engagement
 
 5. Conclusion
