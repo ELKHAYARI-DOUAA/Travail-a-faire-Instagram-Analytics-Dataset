@@ -31,13 +31,13 @@ DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
 
 5. Conclusion
 
-1. Introduction
+ 1. INTRODUCTION
 
 Ce rapport présente une analyse détaillée du dataset Instagram_Analytics.csv, contenant des informations sur la performance d’un compte Instagram : likes, commentaires, impressions, reach, saves, shares, followers, etc.
 
 L’objectif de cette étude est de comprendre les comportements des utilisateurs face aux publications, d’identifier les facteurs influençant la performance et d’évaluer la qualité de l’engagement.
 
-2. Problématique
+2. PROBLEMATIQUE
 
 Les entreprises, marques et créateurs de contenu utilisent Instagram comme outil stratégique pour développer leur visibilité et leur communauté. Cependant, comment mesurer efficacement la performance d’un compte Instagram et quels indicateurs influencent réellement l’engagement des abonnés ?
 
@@ -47,7 +47,7 @@ Ainsi, la problématique principale est :
 
 Cette analyse vise à répondre à cette problématique en examinant les données à travers des statistiques, des visualisations et des indicateurs de performance.
 
-3. Méthodologie utilisée
+3. METHODOLOGIE UTILISEE
 
 Pour répondre à la problématique, la démarche suivante a été adoptée :
 
@@ -63,7 +63,7 @@ Création et analyse du taux d’engagement
 
 Interprétation des résultats obtenus
 
-4. Analyse et interprétation des résultats
+4. ANALYSE ET INTERPRETATION DES RESULTATS
 
 🔵 Cellule 4 — Statistiques descriptives
 Code :
