@@ -5,13 +5,14 @@ DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
 
 .SOMMAIRE
 
-1.Introduction
+1. Introduction
 
 2.Problématique
 
 3.Méthodologie utilisée
 
 4.Analyse et interprétation des résultats
+
    4.1 Chargement de la base de données
    4.2 Vérification des valeurs manquantes
    4.3 Statistiques descriptives
@@ -21,7 +22,7 @@ DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
    4.7 Calcul du taux d’engagement
    4.8 Évolution du taux d’engagement
 
-5.Conclusion
+5. Conclusion
 
 1. Introduction
 
