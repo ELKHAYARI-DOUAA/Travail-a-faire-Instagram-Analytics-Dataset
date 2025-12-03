@@ -21,7 +21,7 @@ DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
    4.7 Calcul du taux d’engagement
    4.8 Évolution du taux d’engagement
 
-5.Conclusion générale
+5.Conclusion
 
 1. Introduction
 
@@ -170,3 +170,17 @@ Interprétation
 RMSE élevé (≈ 50) → le modèle ne parvient pas à prédire précisément le taux d’engagement.
 
 R² négatif → le modèle fait pire qu’une prédiction constante.
+
+5. Conclusion 
+
+Cette étude montre que :
+
+Le dataset est riche et permet une analyse détaillée.
+
+L’engagement dépend fortement des likes, du reach et des interactions globales.
+
+Les variables textuelles doivent être mieux exploitées (NLP).
+
+Les modèles linéaires comme Ridge ne captent pas la complexité du phénomène.
+
+Une approche non linéaire ou deep learning serait plus performante.
