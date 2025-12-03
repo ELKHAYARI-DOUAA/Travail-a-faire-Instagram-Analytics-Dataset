@@ -31,7 +31,7 @@ DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
 
 5. Conclusion
 
- 1. INTRODUCTION
+   INTRODUCTION
 
 Ce rapport présente une analyse détaillée du dataset Instagram_Analytics.csv, contenant des informations sur la performance d’un compte Instagram : likes, commentaires, impressions, reach, saves, shares, followers, etc.
 
@@ -180,7 +180,7 @@ RMSE élevé (≈ 50) → le modèle ne parvient pas à prédire précisément l
 
 R² négatif → le modèle fait pire qu’une prédiction constante.
 
-5. Conclusion 
+5. CONCLUSION
 
 Cette étude montre que :
 
