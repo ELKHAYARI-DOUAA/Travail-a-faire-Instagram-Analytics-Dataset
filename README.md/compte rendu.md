@@ -56,6 +56,7 @@ Création et analyse du taux d’engagement
 Interprétation des résultats obtenus
 
 4. Analyse et interprétation des résultats
+
 🔵 Cellule 4 — Statistiques descriptives
 Code :
 df.describe()
