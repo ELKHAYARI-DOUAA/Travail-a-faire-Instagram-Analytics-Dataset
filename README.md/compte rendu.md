@@ -1,17 +1,17 @@
 COMPTE RENDU D’ANALYSE DE DONNÉES
 Instagram_Analytics.csv
 
-Douaa El Khayari – CAC 2 – Apogée : 24010315
+DOUAA EL KHAYARI – CAC 2 – Apogée : 24010315
 
-SOMMAIRE
+.SOMMAIRE
 
-Introduction
+1.Introduction
 
-Problématique
+2.Problématique
 
-Méthodologie utilisée
+3.Méthodologie utilisée
 
-Analyse et interprétation des résultats
+4.Analyse et interprétation des résultats
    4.1 Chargement de la base de données
    4.2 Vérification des valeurs manquantes
    4.3 Statistiques descriptives
@@ -21,7 +21,7 @@ Analyse et interprétation des résultats
    4.7 Calcul du taux d’engagement
    4.8 Évolution du taux d’engagement
 
-Conclusion générale
+5.Conclusion générale
 
 1. Introduction
 
