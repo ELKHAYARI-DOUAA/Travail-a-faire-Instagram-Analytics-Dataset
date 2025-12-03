@@ -1,130 +1,61 @@
-COMPTE RENDU D’ANALYSE DES DONNÉES
-Dataset : Instagram Analytics
+COMPTE RENDU D’ANALYSE DE DONNÉES
+Instagram_Analytics.csv
 
-Réalisé par : Douaa El Khayari – CAC2 – Apogée : 24010315
+Douaa El Khayari – CAC 2 – Apogée : 24010315
+
+SOMMAIRE
+
+Introduction
+
+Problématique
+
+Méthodologie utilisée
+
+Analyse et interprétation des résultats
+   4.1 Chargement de la base de données
+   4.2 Vérification des valeurs manquantes
+   4.3 Statistiques descriptives
+   4.4 Distribution des likes
+   4.5 Évolution des likes dans le temps
+   4.6 Relation entre Reach et Likes
+   4.7 Calcul du taux d’engagement
+   4.8 Évolution du taux d’engagement
+
+Conclusion générale
 
 1. Introduction
 
-Dans un contexte où Instagram est devenu un outil central de communication, la compréhension des performances des publications est essentielle. Les entreprises, influenceurs et créateurs de contenu doivent analyser leurs statistiques pour optimiser leur visibilité et améliorer l’engagement de leur audience.
+Ce rapport présente une analyse détaillée du dataset Instagram_Analytics.csv, contenant des informations sur la performance d’un compte Instagram : likes, commentaires, impressions, reach, saves, shares, followers, etc.
 
-Cette étude utilise un dataset Instagram comportant 29 999 publications et 15 variables, permettant une analyse complète de l’interaction des utilisateurs.
+L’objectif de cette étude est de comprendre les comportements des utilisateurs face aux publications, d’identifier les facteurs influençant la performance et d’évaluer la qualité de l’engagement.
 
 2. Problématique
 
-La question centrale est :
+Les entreprises, marques et créateurs de contenu utilisent Instagram comme outil stratégique pour développer leur visibilité et leur communauté. Cependant, comment mesurer efficacement la performance d’un compte Instagram et quels indicateurs influencent réellement l’engagement des abonnés ?
 
-Quels sont les facteurs principaux qui influencent l’engagement sur Instagram, et dans quelle mesure peut-on prédire ce niveau d’engagement ?
+Ainsi, la problématique principale est :
 
-Pour y répondre, l’analyse s’est déroulée en plusieurs phases :
-chargement des données, preprocessing, feature engineering, exploration statistique, visualisation, modélisation et évaluation.
+« Quels sont les indicateurs qui influencent le plus la performance des publications Instagram, et comment évolue l'engagement au fil du temps ? »
 
-3. Analyse détaillée cellule par cellule
-🔵 Cellule 0 — Chargement du dataset et aperçu
-Code :
-import pandas as pd
+Cette analyse vise à répondre à cette problématique en examinant les données à travers des statistiques, des visualisations et des indicateurs de performance.
 
-file_path = "/content/Instagram_Analytics.csv"
-df = pd.read_csv(file_path)
+3. Méthodologie utilisée
 
-print("Shape:", df.shape)
-df.head()
+Pour répondre à la problématique, la démarche suivante a été adoptée :
 
-Explication du code
+Importation et lecture du fichier CSV
 
-pd.read_csv() charge le dataset depuis un fichier CSV.
+Vérification de la qualité des données (valeurs manquantes, types)
 
-df.shape permet de connaître le nombre de lignes et de colonnes.
+Calcul des statistiques descriptives
 
-df.head() affiche les cinq premières lignes pour vérifier le format et les valeurs.
+Analyse graphique : histogrammes, courbes temporelles, nuages de points
 
-Sortie :
-Shape: (29999, 15)
+Création et analyse du taux d’engagement
 
-Interprétation
+Interprétation des résultats obtenus
 
-Nous avons un dataset très large (29 999 lignes) contenant 15 colonnes.
-Cela assure une bonne diversité statistique et permet une modélisation de qualité.
-
-🔵 Cellule 1 — Inspection des types + préparation date
-Code :
-df.info()
-
-df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
-
-Explication
-
-df.info() liste les types de données : int, float, object.
-
-pd.to_datetime() convertit la colonne timestamp en un format date utilisable.
-
-Sortie :
-
-Affichage du nombre de colonnes, de leur type, et mémoire utilisée.
-
-Interprétation
-
-Beaucoup de colonnes sont numériques → bon pour l’analyse statistique.
-
-Certaines colonnes object devront être transformées.
-
-Conversion du timestamp est indispensable pour l’analyse temporelle.
-
-🔵 Cellule 2 — Calcul de l’engagement
-Code :
-df['likes'] = df['likes'].fillna(0)
-df['comments'] = df['comments'].fillna(0)
-
-df['engagement'] = df['likes'] + df['comments']
-df['engagement_rate'] = df['engagement'] / df['followers'] * 100
-
-df[['engagement', 'engagement_rate']].head()
-
-Explication
-
-Remplacement des valeurs manquantes par 0 pour éviter les erreurs de calcul.
-
-Calcul de l’engagement : somme des interactions directes.
-
-Calcul de l’engagement_rate (%) : mesure clé sur Instagram.
-
-Interprétation
-
-L’engagement est proportionnel au nombre d’abonnés.
-Un taux important signifie que la publication attire réellement l’attention du public.
-
-🔵 Cellule 3 — Feature Engineering (Nouvelles variables)
-Code :
-df['day'] = df['timestamp'].dt.day_name()
-df['is_weekend'] = df['day'].isin(['Saturday', 'Sunday'])
-
-df['caption_length'] = df['caption'].astype(str).apply(len)
-df['hashtags_count'] = df['hashtags'].astype(str).apply(lambda x: len(x.split()))
-
-Explication
-
-On crée des nouvelles variables utiles :
-
-jour de la semaine
-
-weekend ou non
-
-longueur de la légende
-
-nombre de hashtags
-
-Sortie : affichage d’un tableau avec ces colonnes.
-Interprétation
-
-Ces variables permettent de tester des hypothèses comme :
-
-Les posts du weekend performent-ils mieux ?
-
-Les hashtags augmentent-ils l’engagement ?
-
-Une légende longue attire-t-elle plus d’attention ?
-
-Ces features enrichissent grandement l’analyse et les modèles ML.
-
+4. Analyse et interprétation des résultats
 🔵 Cellule 4 — Statistiques descriptives
 Code :
 df.describe()
@@ -141,6 +72,7 @@ Forte variance dans les likes → certaines publications sont virales.
 Écarts extrêmes dans le reach → certaines publications ont explosé en visibilité.
 
 Les commentaires sont plus faibles mais corrélés aux likes.
+
 
 🔵 Cellule 5 — Visualisations (histogrammes)
 
@@ -159,6 +91,9 @@ Les likes sont asymétriques → beaucoup de posts faibles, quelques pics extrao
 Les followers sont très concentrés → peu d’outliers.
 
 L’engagement rate varie beaucoup, indiquant un public irrégulier.
+<img width="713" height="393" alt="téléchargement (4)" src="https://github.com/user-attachments/assets/d575a607-2b90-4280-9a68-7249a53ded6b" />
+<img width="544" height="385" alt="téléchargement (5)" src="https://github.com/user-attachments/assets/234b7198-efd0-421a-9609-17d403fe904c" />
+
 
 🔵 Cellule 6 — Matrice de corrélation
 Code :
@@ -172,6 +107,8 @@ Explication
 Calcul des corrélations entre les variables numériques.
 
 La heatmap aide à repérer les relations fortes.
+<img width="735" height="528" alt="téléchargement (6)" src="https://github.com/user-attachments/assets/5cf770eb-08b9-40b2-acf6-68ed3d0f4035" />
+
 
 Interprétation
 
@@ -233,27 +170,3 @@ Interprétation
 RMSE élevé (≈ 50) → le modèle ne parvient pas à prédire précisément le taux d’engagement.
 
 R² négatif → le modèle fait pire qu’une prédiction constante.
-
-Conclusion locale
-
-Le modèle Ridge n’est pas adapté.
-Les variables choisies ne suffisent pas à expliquer l’engagement.
-Il faudra tester :
-✔ Random Forest
-✔ Gradient Boosting
-✔ XGBoost
-✔ non-linéarités et interactions
-
-4. Conclusion générale
-
-Cette étude montre que :
-
-Le dataset est riche et permet une analyse détaillée.
-
-L’engagement dépend fortement des likes, du reach et des interactions globales.
-
-Les variables textuelles doivent être mieux exploitées (NLP).
-
-Les modèles linéaires comme Ridge ne captent pas la complexité du phénomène.
-
-Une approche non linéaire ou deep learning serait plus performante.
