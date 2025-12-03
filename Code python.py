@@ -1,4 +1,5 @@
 Importer les données brutes est la première étape. On vérifie que le fichier se charge correctement.
+
   # Chargement du dataset Instagram depuis un fichier local.
 # Le chemin /content/ est typique de Google Colab.
 import pandas as pd
